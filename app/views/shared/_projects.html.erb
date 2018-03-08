@@ -1,0 +1,37 @@
+<section id="projects" class="section section-small no-pb bg-light-gray">
+    <div class="container-fluid">
+
+        <!-- Section Header -->
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <header class="text-center">
+                    <h2 class="section-title underline"> Some Of Our Latest Projects</h2>
+                    <p class="section-subtitle">
+                      We are proud to have a number of satisfied clients whom we have helped beat the competition.
+  The varied range of design and development projects are enough to reflect the professionalism and experience that we have.
+                    </p>
+                </header>
+            </div>
+        </div>
+        <!-- /Section Header -->
+
+        <div class="row section-content animated fadeIn wow" data-wow-duration="0.9s">
+                    <% @projects.each do |project| %>
+            <!-- Project Image -->
+            <div class="col-md-3 col-sm-6 col-xs-12 project-col">
+                  <%= link_to image_path((project.image_url)), class: "project-item image-popup" do %>
+
+                    <div class="gallery-image">
+                          <%= image_tag (project.image_url.to_s) %>
+                    </div>
+
+                <% end %>
+            </div>
+            <!-- /Project Image -->
+<% end %>
+
+
+        </div>
+
+    </div>
+</section>

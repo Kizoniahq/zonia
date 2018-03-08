@@ -1,0 +1,87 @@
+<header id="home" class="header">
+
+    <!-- Navigation -->
+    <nav id="navigation" class="navbar affix">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <!-- Navigation Header -->
+                    <div class="navbar-header">
+
+                        <!-- Toggle Button -->
+                        <button type="button"
+                                class="navbar-toggle collapsed"
+                                data-toggle="collapse"
+                                data-target="#main-menu"
+                                aria-expanded="false"
+                                aria-controls="main-menu">
+
+                            <span class="sr-only">Toggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+
+                        </button>
+                        <!-- /Toggle Button -->
+
+                        <!-- Brand -->
+                        <a href="#" class="brand">
+
+                            <!-- Logo Big -->
+                            <div class="big">
+                                <span class="navbar-brand"><%=image_tag 'logo.png', :class => "lo" %></span> Zonia Tech
+                            </div>
+                            <!-- /Logo Big -->
+
+                            <!-- Logo Small -->
+                            <div class="small">
+                                <span class="navbar-brand" ><%=image_tag 'logo.png', :class => "lo"  %></span>
+                            </div>
+                            <!-- /Logo Small -->
+
+                        </a>
+                        <!-- /Brand -->
+
+                    </div>
+                    <!-- /Navigation Header -->
+
+                    <!-- Navigation -->
+                    <div id="main-menu" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+
+                          <%if adminuser_signed_in? %>
+                              <li><a href="#"> Welcome <%= current_adminuser.name %></a></li>
+                          <li><%= link_to "Dashboard", adminusers_path, class: "smooth-scroll" %></li>
+                            <li><%= link_to "Log Out!!", destroy_adminuser_session_path, :method => :delete, :class =>"smooth-scroll"  %>
+
+                          <%else %>
+                            <li class="Smooth-scroll">
+                                <%= link_to "Home", root_path %>
+                            </li>
+                            <li> <%= link_to "Projects", projects_path, class: "smooth-scroll" %></li>
+
+                            <li><a class="smooth-scroll" href="#services">Services</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="about.html">About Us</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="about.html">About Company</a></li>
+                                    <li><a href="about-person.html">About Person</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a class="smooth-scroll" href="#testimonials">Testimonials</a></li>
+
+                            <li><a class="smooth-scroll" href="#contact">Contact</a></li>
+                          <% end %>
+                        </ul>
+                    </div>
+                    <!-- /Navigation -->
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- /Navigation -->
+
+    <%= yield %>

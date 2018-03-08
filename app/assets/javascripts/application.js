@@ -10,6 +10,32 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require bootstrap
+//= require jquery.magnific-popup.min
+//= require jquery.appear
+//= require general
 //= require rails-ujs
 //= require turbolinks
-//= require_tree .
+//= require jquery.stellar.min
+//= require cable
+//= require wow.min
+//= require jquery.validate.min
+//= require jquery.animateNumber.min
+//= require general
+<script type="text/javascript">
+$(document).ready(function() {
+$("#owl-carousel").owlCarousel({
+
+slideSpeed: 300,
+paginationSpeed: 400,
+singleItem: true
+// "singleItem:true" is a shortcut for:
+// items : 1,
+// itemsDesktop : false,
+// itemsDesktopSmall : false,
+// itemsTablet: false,
+// itemsMobile : false
+});
+});
+</script>

@@ -2,13 +2,113 @@
 <html>
   <head>
     <title>Zonia</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
-    <%= yield %>
+    <!-- Preloader--> <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+<!-- /Preloader -->
+
+<!-- Header -->
+<%= render "shared/header" %>
+<!-- Modal: Get In Touch -->
+<div class="modal fade" id="get-in-touch" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="fa fa-times"></i>
+                </button>
+                <h4 class="modal-title">Get In Touch</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+
+                    <!-- Contact Form -->
+                    <div class="col-md-12 contact-form">
+                        <form class="form-ajax" method="post">
+                            <input type="hidden" name="form" value="Get In Touch Modal">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name... *" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="email" name="email" class="form-control" placeholder="E-mail address... *" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <textarea name="message" class="form-control" placeholder="Message... "></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12 text-center">
+                                    <button type="submit" class="btn btn-theme"><i class="icon fa fa-fw fa-paper-plane-o"></i> <span class="text">Send Message</span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /Contact Form -->
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Modal: /Get In Touch -->
+
+<!-- Modal: Result Message -->
+<div class="modal fade" id="result" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="fa fa-times"></i>
+                </button>
+                <h4 class="modal-title">Sending message</h4>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="result-icon">
+                    <div class="icon-border">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" preserveAspectRatio="none">
+                            <circle cx="8" cy="8" r="6.215" transform="rotate(90 8 8)"></circle>
+                        </svg>
+                        <i class="icon fa fa-check"></i>
+                    </div>
+                </div>
+
+                <p class="modal-result h4 text-center"></p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /Modal: Result Message -->
+<script text="text/javascript">
+$(function(){ // this replaces document.ready
+  setTimeout(function(){
+    $('#preloader').fadeOut('slow', function() {
+      $(this).remove();
+    });
+  }, 1500);
+});
+</script>
   </body>
 </html>
