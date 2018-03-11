@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Zonia:Admin</title>
+  <title>Zonia:Management</title>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="keywords" content="" />
 
-  <%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'management', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'management', 'data-turbolinks-track': 'reload' %>
   <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 </head>
 <body>
   <div class="wrapper">
 		<div class="sidebar" data-color="purple" data-image="img/sidebar-5.jpg">
-        <%= render "adminusers/sidebar" %>
-        <%= render "adminusers/header" %>
+        <%= render "management/sidebar" %>
+        <%= render "madnagement/header" %>
     <%= yield %>
 
   </div>

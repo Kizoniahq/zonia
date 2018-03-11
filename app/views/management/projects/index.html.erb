@@ -1,0 +1,39 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 card">
+        <div class="header">
+          <h4 class="title">All Projects </h4>
+        </div>
+        <div class="content">
+          <div class="projects-list">
+            <% @projects.each do |project| %>
+              <div class="col-sm-4 col-xs-12 project">
+                  <%= link_to project do %>
+                      <div class="project-image-wrapper">
+                          <div class="project-image" style="height:200px;">
+                              <%= image_tag (project.image_url.to_s) %>
+                              <div class="information">
+                                  <h3 class="title"><%= project.title %></h3>
+                                  <h5 class="title"><%= link_to 'Edit', edit_management_project_path(project) %></span>
+                                  <h5 class="title"><%= link_to 'Destroy', management_project_path(project), method: :delete, data: { confirm: 'Are you sure?' } %></span>
+                              </div>
+                          </div>
+                      </div>
+                  <% end %>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+
+                          <div class="image">
+                              <%= link_to new_management_project_path, class: "btn btn-purple" do %>
+                                 <h4> Add Project </h4>
+                                 <% end %>
+                      </div>
+        </div>
+          </div>
+        </div>
+      </div>

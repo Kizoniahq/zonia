@@ -1,0 +1,117 @@
+<section style="background-image: url(<%= asset_path 'Ban2.png' %>); " class="secbg">
+</section>
+
+<!-- Main -->
+<main class="main-container">
+
+    <!-- Section: Single Project -->
+    <div class="section section-small single-project">
+        <div class="container">
+            <div class="row">
+
+                <!-- Project Images -->
+                <div class="col-md-6">
+                    <div class="image">
+
+                              <%= link_to image_path((@projectimage.image_url)), class: "image-popup" do %>
+                            <div class="gallery-image">
+                              <%= image_tag (@projectimage.image_url.to_s), class: "image-popup" %>
+                            </div>
+                            <% end %>
+
+                    </div>
+                </div>
+                <!-- /Project Images -->
+
+                <!-- Project Information -->
+                <div class="col-md-6 information">
+
+                    <div class="row">
+
+                        <div class="col-sm-6">
+                            <h3 class="title">Project Description</h3>
+                        </div>
+
+
+                    </div>
+
+                    <p>
+                        <%= raw(@project.details) %>
+                    </p>
+
+                    <h3 class="title"><%= @project.title %></h3>
+
+
+                    <ul class="details">
+                        <li><span>Client: </span> <%= @project.client %></li>
+                        <li><span>Date: </span> <%= @project.created_at %></li>
+
+                    </ul>
+
+
+
+                    <a href="<%=@project.links %>" class="btn btn-theme"><i class="icon fa fa-fw fa-check-square-o"></i> <span class="text">Goto Project</span></a>
+
+                </div>
+                <!-- /Project Information -->
+
+            </div>
+        </div>
+    </div>
+    <!-- /Section: Single Project -->
+
+    <!-- Section: Recent Projects -->
+    <section class="section section-small">
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="row">
+                <div class="col-md-12 ">
+                    <header>
+                        <h2 class="section-title">Recent Projects</h2>
+                        <p class="section-subtitle">
+                          Here are some recent projects
+                        </p>
+                    </header>
+                </div>
+            </div>
+            <!-- /Section Header -->
+
+            <!-- Section Content -->
+            <div class="row section-content">
+                <div class="col-md-12">
+
+                    <!-- Projects Carousel -->
+                    <div id="carousel-projects" class="owl-carousel owl-theme">
+                        <% @projects.each do |project| %>
+                        <!-- Project Item -->
+                        <div class="item project">
+                            <a href="single-project.html">
+                                <div class="project-image-wrapper">
+                                    <div class="project-image">
+                                        <%= image_tag (projectimage.image_url.to_s) %>
+                                        <div class="information">
+                                            <h3 class="title"><%= project.title %></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- /Project Item -->
+                        <% end %>
+
+
+
+                    </div>
+                    <!-- /Projects Carousel -->
+
+                </div>
+            </div>
+            <!-- Section Content -->
+
+        </div>
+    </section>
+    <!-- /Section: Recent Projects -->
+
+</main>
+<!-- /Main -->

@@ -1,0 +1,70 @@
+<section style="background-image: url(<%= asset_path 'Ban2.png' %>); " class="secbg">
+</section>
+
+
+<!-- Main -->
+<main class="main-container">
+    <div class="container">
+        <div class="row">
+
+            <div class="projects-list">
+              <% @projects.each do |project| %>
+                <div class="col-sm-6 col-xs-12 project">
+                    <%= link_to project do %>
+                        <div class="project-image-wrapper">
+                            <div class="project-image" style="height:220px;">
+                                <%= image_tag (projectimage.image_url.to_s) %>
+                                <div class="information">
+                                    <h3 class="title"><%= project.title %></h3>
+                                    <span class="category"><%= project.client %></span>
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
+                </div>
+                <% end %>
+              </div>
+
+
+
+        </div>
+    </div>
+</main>
+<!-- /Main -->
+
+
+<!-- Scroll To Top -->
+<div id="scroll-to-top" class="scroll-to-top">
+    <i class="icon fa fa-angle-up"></i>
+</div>
+<!-- /Scroll To Top -->
+
+<!-- Modal: Result Message
+<div class="modal fade" id="result" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="fa fa-times"></i>
+                </button>
+                <h4 class="modal-title">Sending message</h4>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="result-icon">
+                    <div class="icon-border">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" preserveAspectRatio="none">
+                            <circle cx="8" cy="8" r="6.215" transform="rotate(90 8 8)"></circle>
+                        </svg>
+                        <i class="icon fa fa-check"></i>
+                    </div>
+                </div>
+
+                <p class="modal-result h4 text-center"></p>
+            </div>
+
+        </div>
+    </div>
+</div>-->

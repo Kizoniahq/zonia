@@ -1,0 +1,38 @@
+<%= simple_form_for([@managementmanagement, :management, @project], :url => management_project_path(@project)) do |f| %>
+<%= f.error_notification %>
+
+
+  <div class="form-group">
+    <div class="col-md-12">
+
+    <%= f.input :title, class: "form-control" %>
+  </div>
+  </div>
+  <div class="form-group">
+    <div class="col-md-12">
+    <%= f.input :details, class: "form-control", as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } } %>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-md-12">
+    <%= f.input :client, class: "form-control" %>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-md-12">
+    <%= f.input :projectimage, as: :file,  class: "form-control" %>
+  </div>
+</div>
+<div class="form-group">
+  <div class="col-md-12">
+    <%= f.input :links,  class: "form-control" %>
+  </div>
+</div>
+<div class="form-group">
+  <div class="col-md-12">
+    <%= f.submit :submit, class: "btn  btn-picasso" %>
+  </div>
+</div>
+<% end %>

@@ -1,0 +1,58 @@
+<div class="sidebar-wrapper">
+			<div class="logo">
+				<a class="simple-text">
+          <% if management_signed_in? %>
+					<%= current_management.name %>
+          <% end%>
+				</a>
+			</div>
+
+			<ul class="nav">
+				<li class="active">
+					<%= link_to management_index_path do%>
+						<i class="pe-7s-user"></i>
+						<p>User Profile</p>
+					<% end %>
+				</li>
+				<li>
+					<%= link_to edit_management_registration_path do%>
+						<i class="pe-7s-user"></i>
+						<p>User Profile</p>
+					<% end %>
+				</li>
+				<li>
+					<%= link_to management_projects_path  do %>
+						<i class="pe-7s-note2"></i>
+						<p>Projects</p>
+					<% end %>
+				</li>
+				<li>
+						<i class="pe-7s-wristwatch" ></i>
+						<p> Services </p>
+						<% end %>
+				</li>
+				<li>
+						<i class="pe-7s-headphones"></i>
+						<p>Team Members</p>
+					<% end %>
+				</li>
+				<li>
+						<i class="pe-7s-study"></i>
+						<p>Education</p>
+					<% end %>
+				</li>
+				<li>
+					<a href="notifications.html">
+						<i class="pe-7s-bell"></i>
+						<p>Notifications</p>
+					</a>
+				</li>
+				<li class="active-pro">
+					<%=link_to root_path do %>
+						<i class="pe-7s-rocket"></i>
+						<p>Back To Zonia</p>
+					<% end %>
+				</li>
+			</ul>
+		</div>
+	</div>

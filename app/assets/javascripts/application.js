@@ -11,12 +11,13 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap
+//= require bootstrap.min
 //= require jquery.magnific-popup.min
 //= require jquery.appear
 //= require general
-//= require rails-ujs
+//= require jquery_ujs
 //= require turbolinks
+//= require owl.carousel.min
 //= require jquery.stellar.min
 //= require cable
 //= require wow.min

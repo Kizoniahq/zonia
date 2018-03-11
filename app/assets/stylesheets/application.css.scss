@@ -13,7 +13,7 @@
  *= require owl.carousel
 *= require owl.theme
  */
- @import "bootstrap";
+ @import "bootstrap.min";
  @import "bootstrap-theme.min";
  @import "elegant-icons";
  @import "animate";
@@ -23,3 +23,4 @@
  @import "theme";
  @import "magnific-popup";
  @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+ @import "animate";

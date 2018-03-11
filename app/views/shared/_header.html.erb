@@ -50,10 +50,10 @@
                     <div id="main-menu" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
 
-                          <%if adminuser_signed_in? %>
-                              <li><a href="#"> Welcome <%= current_adminuser.name %></a></li>
-                          <li><%= link_to "Dashboard", adminusers_path, class: "smooth-scroll" %></li>
-                            <li><%= link_to "Log Out!!", destroy_adminuser_session_path, :method => :delete, :class =>"smooth-scroll"  %>
+                          <%if management_signed_in? %>
+                              <li><a href="#"> Welcome <%= current_management.name %></a></li>
+                          <li><%= link_to "Dashboard", managements_path, class: "smooth-scroll" %></li>
+                            <li><%= link_to "Log Out!!", destroy_management_session_path, :method => :delete, :class =>"smooth-scroll"  %>
 
                           <%else %>
                             <li class="Smooth-scroll">
