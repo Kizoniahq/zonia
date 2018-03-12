@@ -339,7 +339,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <%= f.input :turbolinks, label: "facebook link" %>
+                    <%= f.input :links, label: "facebook link" %>
                   </div>
                 </div>
 
@@ -373,21 +373,22 @@
                       <a href="#">
                         <img class="avatar border-gray" src="assets/img/faces/face-3.jpg" alt="..."/>
 
-                        <h4 class="title"><%= current_managment.name %><br />
-                          <small>michael24</small>
+                        <h4 class="title"><%= @current_management.name %><br />
+                          <small><%= @current_management.email %></small>
                         </h4>
                       </a>
                     </div>
-                    <p class="description text-center"> "Lamborghini Mercy <br>
-                      Your chick she so thirsty <br>
-                      I'm in that two seat Lambo"
+                    <p class="description text-center"> <%= @current_management.position %> <br>
+
                     </p>
+                      <div  class="content text-center">
+                        <%= raw(@current_management.bio)%></br>
+                      </div>
                   </div>
                   <hr>
                   <div class="text-center">
-                    <button href="#" class="btn btn-simple"><i class="fa fa-facebook-square"></i></button>
-                    <button href="#" class="btn btn-simple"><i class="fa fa-twitter"></i></button>
-                    <button href="#" class="btn btn-simple"><i class="fa fa-google-plus-square"></i></button>
+                    <button href="https://facebook.com/<%= @current_management.links %>"
+                      class="btn btn-simple"><i class="fa fa-facebook-square"></i></button>
 
                   </div>
                 </div>

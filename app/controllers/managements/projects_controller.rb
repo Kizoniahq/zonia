@@ -1,11 +1,12 @@
-class Management::ProjectsController < ApplicationController
+class Managements::ProjectsController < ApplicationController
   layout 'management'
     before_action :authenticate_management!
   before_action :set_project, only: [:show, :edit, :update, :destroy]
   # GET /projects/new
   def index
-    @projects = Project.where(management_id: current_management)
-  end
+  @projects = Project.all.order('created_at DESC')
+
+ end
   def new
     @project = current_management.projects.build
   end
@@ -65,6 +66,6 @@ class Management::ProjectsController < ApplicationController
     def project_params
       params.require(:project).permit(:details, :title, :client, :projectimage, :management_id, :links )
     end
-  end
+
 
 end

@@ -12,8 +12,8 @@
                 <div class="col-sm-6 col-xs-12 project">
                     <%= link_to project do %>
                         <div class="project-image-wrapper">
-                            <div class="project-image" style="height:220px;">
-                                <%= image_tag (projectimage.image_url.to_s) %>
+                            <div class="project-image" >
+                                <%= image_tag (project.projectimage_url.to_s) %>
                                 <div class="information">
                                     <h3 class="title"><%= project.title %></h3>
                                     <span class="category"><%= project.client %></span>

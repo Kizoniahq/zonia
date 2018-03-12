@@ -19,10 +19,10 @@
                     <% @projects.each do |project| %>
             <!-- Project Image -->
             <div class="col-md-3 col-sm-6 col-xs-12 project-col">
-                  <%= link_to image_path((projectimage.image_url)), class: "project-item image-popup" do %>
+                  <%= link_to image_path((project.projectimage_url)), class: "project-item image-popup" do %>
 
                     <div class="gallery-image">
-                          <%= image_tag (projectimage.image_url.to_s) %>
+                          <%= image_tag (project.projectimage_url.to_s) %>
                     </div>
 
                 <% end %>

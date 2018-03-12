@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
-  get 'management/index'
+  mount Ckeditor::Engine => '/ckeditor'
 
-  get 'management/show'
+
+  resources :managements, only: [:index]
+
 
   devise_for :managements
   devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config
 
 
-   namespace :management do
+   namespace :managements do
       resources :projects
         resources :products
     end
@@ -21,6 +23,9 @@ Rails.application.routes.draw do
 
     authenticated :user do
        root 'users#index', as: "authenticated_root"
+     end
+     authenticated :managment do
+       root "management#index"
      end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

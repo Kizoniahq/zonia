@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require ckeditor/init
 //= require jquery
 //= require bootstrap.min
 //= require jquery.magnific-popup.min
@@ -20,6 +21,7 @@
 //= require owl.carousel.min
 //= require jquery.stellar.min
 //= require cable
+//= require init_ckeditor
 //= require wow.min
 //= require jquery.validate.min
 //= require jquery.animateNumber.min

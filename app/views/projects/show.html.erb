@@ -13,9 +13,9 @@
                 <div class="col-md-6">
                     <div class="image">
 
-                              <%= link_to image_path((@projectimage.image_url)), class: "image-popup" do %>
+                              <%= link_to image_path((@project.projectimage_url)), class: "image-popup" do %>
                             <div class="gallery-image">
-                              <%= image_tag (@projectimage.image_url.to_s), class: "image-popup" %>
+                              <%= image_tag (@project.projectimage_url.to_s), class: "image-popup" %>
                             </div>
                             <% end %>
 
@@ -89,7 +89,7 @@
                             <a href="single-project.html">
                                 <div class="project-image-wrapper">
                                     <div class="project-image">
-                                        <%= image_tag (projectimage.image_url.to_s) %>
+                                        <%= image_tag (project.projectimage_url.to_s) %>
                                         <div class="information">
                                             <h3 class="title"><%= project.title %></h3>
                                         </div>

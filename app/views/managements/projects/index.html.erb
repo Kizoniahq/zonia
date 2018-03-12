@@ -12,11 +12,12 @@
                   <%= link_to project do %>
                       <div class="project-image-wrapper">
                           <div class="project-image" style="height:200px;">
-                              <%= image_tag (project.image_url.to_s) %>
+                              <%= image_tag (project.projectimage_url.to_s) %>
+
                               <div class="information">
                                   <h3 class="title"><%= project.title %></h3>
-                                  <h5 class="title"><%= link_to 'Edit', edit_management_project_path(project) %></span>
-                                  <h5 class="title"><%= link_to 'Destroy', management_project_path(project), method: :delete, data: { confirm: 'Are you sure?' } %></span>
+                                  <h5 class="title"><%= link_to 'Edit', edit_managements_project_path(project) %></span>
+                                  <h5 class="title"><%= link_to 'Destroy', managements_project_path(project), method: :delete, data: { confirm: 'Are you sure?' } %></span>
                               </div>
                           </div>
                       </div>
@@ -29,8 +30,8 @@
         <div class="col-md-2">
 
                           <div class="image">
-                              <%= link_to new_management_project_path, class: "btn btn-purple" do %>
-                                 <h4> Add Project </h4>
+                              <%= link_to new_managements_project_path, class: "btn btn-info btn-fill pull-right" do %>
+                                  Add Project
                                  <% end %>
                       </div>
         </div>

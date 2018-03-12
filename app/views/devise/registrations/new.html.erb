@@ -49,7 +49,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
       <div class="form-group">
         <%= f.input :country, :as => :select, collection: ["Afghanistan",
   "Aland Islands",
@@ -299,12 +299,15 @@
          class: "form-control", label: "Country" %>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
       <div class="form-group">
         <%= f.input :postalcode, class: "form-control", label: "Postal code/Zip code" %>
       </div>
     </div>
-    <div class="col-md-4">
+
+  </div>
+  <div class="row">
+    <div class="col-md-12">
       <div class="form-group">
         <%= f.input :position, required: true, class: "form-control", label: "Company Position" %>
       </div>
@@ -313,7 +316,7 @@
   <div class="row">
     <div class="col-md-12">
       <div class="form-group">
-        <%= f.input :bio, class: "form-control", label: "Bio" %>
+        <%= f.input :bio, class: "form-control", as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } }, label: "Tell Us About You" %>
       </div>
     </div>
   </div>

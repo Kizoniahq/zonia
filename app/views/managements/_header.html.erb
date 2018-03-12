@@ -46,9 +46,9 @@
 
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<% if adminuser_signed_in? %>
+							<% if management_signed_in? %>
               <a>
-								<p><%= current_adminuser.email %></p>
+								<p><%= current_management.email %></p>
               </a>
 							<%end %>
 						</li>
@@ -70,7 +70,7 @@
 							</ul>
 						</li>
 						<li>
-							<%= link_to destroy_adminuser_session_path, :method => :delete do %>
+							<%= link_to destroy_management_session_path, :method => :delete do %>
 								<p>Log out</p>
 							<% end %>
 						</li>
