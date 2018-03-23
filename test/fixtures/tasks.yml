@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyText
+  project_id: 1
+  management_id: 1
+  expected: MyString
+  done: false
+
+two:
+  body: MyText
+  project_id: 1
+  management_id: 1
+  expected: MyString
+  done: false

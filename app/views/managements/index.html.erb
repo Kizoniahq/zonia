@@ -1,1 +1,63 @@
 
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+
+          <%= link_to managements_projects_path do %>
+          <div class="col-lg-3 col-sm-6">
+              <div class="card">
+                  <div class="content">
+                      <div class="row">
+                          <div class="col-xs-5">
+                              <div class="icon-big icon-warning text-center">
+                                  <i class="pe-7s-note2"></i>
+                              </div>
+                          </div>
+                          <div class="col-xs-7">
+                              <div class="numbers">
+                                  <p>Projects</p>
+                                  <%= Project.count %>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="footer">
+                          <hr />
+                          <div class="stats">
+                              <i class="ti-reload"></i> Updated now
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <% end %>
+          <%= link_to managements_contacts_path do %>
+          <div class="col-lg-3 col-sm-6">
+              <div class="card">
+                  <div class="content">
+                      <div class="row">
+                          <div class="col-xs-5">
+                              <div class="icon-big icon-warning text-center">
+                                  <i class="pe-7s-users"></i>
+                              </div>
+                          </div>
+                          <div class="col-xs-7">
+                              <div class="numbers">
+                                  <p>Contacts</p>
+                                  <%= Contact.count %>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="footer">
+                          <hr />
+                          <div class="stats">
+                              <i class="ti-reload"></i> Updated now
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <% end %>
+
+        </div>
+      </div>
+    </div>

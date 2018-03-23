@@ -7,6 +7,8 @@ class ManagementsController < ApplicationController
   def index
   @managements = Management.where(management_id: current_management).order('created_at DESC')
   @projects = Project.all.order('created_at DESC')
+  @contacts = Contact.all.order('created_at DESC')
+
   end
 
 

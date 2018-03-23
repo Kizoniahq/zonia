@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+
+
   mount Ckeditor::Engine => '/ckeditor'
 
 
@@ -13,10 +16,12 @@ Rails.application.routes.draw do
    namespace :managements do
       resources :projects
         resources :products
+        resources :contacts
     end
 
       resources :projects, only: [:index, :show]
         resources :products, only: [:index, :show]
+        resources :contacts, only:[:new, :create]
 
   ActiveAdmin.routes(self)
     root 'home#index'

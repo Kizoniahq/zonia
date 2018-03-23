@@ -371,7 +371,7 @@
                   <div class="content">
                     <div class="author">
                       <a href="#">
-                        <img class="avatar border-gray" src="assets/img/faces/face-3.jpg" alt="..."/>
+                        <%= image_tag (@current_management.managementimage_url.to_s), class: "avatar border-gray" %>
 
                         <h4 class="title"><%= @current_management.name %><br />
                           <small><%= @current_management.email %></small>
