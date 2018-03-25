@@ -7,5 +7,6 @@ class Management < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
  has_many :projects
+ has_many :contacts
 
 end

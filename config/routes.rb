@@ -14,9 +14,14 @@ Rails.application.routes.draw do
 
 
    namespace :managements do
-      resources :projects
+      resources :projects do
+        resources :tasks
+      end
+      resources :tasks
         resources :products
-        resources :contacts
+        resources :contacts do
+          resources :mails
+        end
     end
 
       resources :projects, only: [:index, :show]

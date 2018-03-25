@@ -1,0 +1,11 @@
+<div class="content">
+
+    <div class="row">
+      <div class="col-md-8">
+        <%= simple_form_for ([:managements, @contact, @contact.mails.build]) do |f| %>
+        <%= f.input :body, as: :ckeditor, input_html: { ckeditor: { toolbar: 'static' } }, label: "Reply"  %>
+        <%= f.submit :submit, class: "btn btn-theme" %>
+        <% end %>
+      </div>
+    </div>
+  </div>

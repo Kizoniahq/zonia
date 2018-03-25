@@ -8,6 +8,17 @@
 body{
   overflow:auto;
 }
+//make dynamic
+@media (min-width: 992px){
+  .nav{
+    .dropdown-menu{
+      a{
+        color: #000 !important;
+      }
+    }
+  }
+}
+
 .bg{
   background-image: asset_url("banner.png");
   background-size: cover ;

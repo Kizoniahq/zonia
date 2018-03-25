@@ -1,0 +1,2 @@
+module Managements::MailsHelper
+end

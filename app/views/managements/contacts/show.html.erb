@@ -1,2 +1,55 @@
-<h1>Managements::Contacts#show</h1>
-<p>Find me in app/views/managements/contacts/show.html.erb</p>
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+              <div class="content">
+                <div class="author">
+                  <a href="#">
+                    <%= image_tag "contact.png", class: "img-responsive border-white" %>
+                    <br />
+                    <h5 class="title"><%= @contact.name %> <br />
+                      <small><%= @contact.Email %></small>
+                    </h5>
+
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-xs-6">
+              <div class="content">
+                <div class="row">
+                  <div class="col-6">
+                    <small><strong>Phone:</strong><%= @contact.phone %></small>
+                  </div>
+                  <div class="col-6">
+                    <small><strong>Country: </strong><%= @contact.country %></small>
+                  </div>
+
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <h4 class="title"><%= @contact.ideaname %> </h4>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-10">
+                    <div class="alert alert-info">
+                      <p><%= raw(@contact.message) %></p>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%= render 'managements/mails/form' %>
+  </div>
+</div>
