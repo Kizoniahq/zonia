@@ -5,8 +5,4 @@
 //= require turbolinks
 //= require init_ckeditor
 // Vendor Files
-//= require bootstrap-notify
-//= require bootstrap-select
 //= require light-bootstrap-dashboard
-//= require chartist.min
-//= require demo
