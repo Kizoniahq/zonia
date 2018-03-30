@@ -2,7 +2,8 @@
 
     <div class="row">
       <div class="col-md-8">
-        <%= simple_form_for ([:managements, @contact, @contact.mails.build]) do |f| %>
+        <%= simple_form_for ([:managements, @contact, @contact.comments.build]) do |f| %>
+        <%= f.input :email, :as => :select, :collection => Contact.all.map{|c| ["#{c.email}, #{c.name}", c.id]} %> 
         <%= f.input :body, as: :ckeditor, input_html: { ckeditor: { toolbar: 'static' } }, label: "Reply"  %>
         <%= f.submit :submit, class: "btn btn-theme" %>
         <% end %>

@@ -25,7 +25,7 @@ class Managements::ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to root_path, notice: 'Hi, Will get in touch soon.' }
+        format.html { redirect_to managements_contacts_path, notice: 'Hi, Will get in touch soon.' }
         format.json { redirect_to root_path, status: :created, location: @contact }
       else
         format.html { render :new }

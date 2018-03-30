@@ -1,17 +1,9 @@
 Rails.application.routes.draw do
-
-
-
   mount Ckeditor::Engine => '/ckeditor'
-
-
   resources :managements, only: [:index]
-
-
   devise_for :managements
   devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config
-
 
    namespace :managements do
       resources :projects do
@@ -20,7 +12,7 @@ Rails.application.routes.draw do
       resources :tasks
         resources :products
         resources :contacts do
-          resources :mails
+          resources :comments
         end
     end
 

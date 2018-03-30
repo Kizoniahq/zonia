@@ -2,12 +2,20 @@
 
 one:
   name: MyString
-  Email: MyString
-  ideaname: MyString
+  email: MyString
+  phone: MyString
   message: MyText
+  country: MyString
+  lead: false
+  ideaname: MyString
+  management: one
 
 two:
   name: MyString
-  Email: MyString
-  ideaname: MyString
+  email: MyString
+  phone: MyString
   message: MyText
+  country: MyString
+  lead: false
+  ideaname: MyString
+  management: two

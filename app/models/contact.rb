@@ -1,5 +1,3 @@
 class Contact < ApplicationRecord
-  has_many :mails, dependent: :destroy
-  belongs_to :management
-
+  has_many :comments, dependent: :destroy
 end

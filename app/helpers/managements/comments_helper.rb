@@ -1,0 +1,2 @@
+module Managements::CommentsHelper
+end
