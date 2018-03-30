@@ -26,7 +26,6 @@
 //= require jquery.validate.min
 //= require jquery.animateNumber.min
 //= require general
-<script type="text/javascript">
 $(document).ready(function() {
 $("#owl-carousel").owlCarousel({
 
@@ -41,4 +40,3 @@ singleItem: true
 // itemsMobile : false
 });
 });
-</script>
