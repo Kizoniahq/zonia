@@ -25,7 +25,6 @@ gem 'jquery-rails'
 gem 'sitemap_generator'
 gem 'social-share-button', '~> 0.1.6'
 gem 'activeadmin', github: 'activeadmin'
-gem "active_material", github: "vigetlabs/active_material"
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
