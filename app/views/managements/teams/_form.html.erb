@@ -1,0 +1,17 @@
+<%= simple_form_for([@management, :managements, @team], :url => managements_teams_path) do |f| %>
+<%= f.error_notification %>
+<%= f.input :avatar, as: :file,  class: "form-control" %>
+
+<%= f.input :name, class: "form-control" %>
+<%= f.input :github, class: "form-control", placeholder: "https://github.com/xxx" %>
+<%= f.input :skill_1, class: "form-control", placeholder: "basic skill" %>
+<%= f.input :skill_1, class: "form-control", placeholder: "speacialization" %>
+<%= f.input :skill_others, class: "form-control", placeholder: "Other skill" %>
+<%= f.input :position, class: "form-control", placeholder: "Organization Positions" %>
+<%= f.input :bio, class: "form-control", placeholder: "About You",  as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } }  %>
+
+
+
+
+
+<%end %>

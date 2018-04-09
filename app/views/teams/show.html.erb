@@ -1,0 +1,138 @@
+<!-- Section: Page Header -->
+<section class="section-page-header">
+    <div class="container">
+        <div class="row">
+
+            <!-- Page Title -->
+            <div class="col-md-8">
+                <h1 class="title">Vincent Harper</h1>
+                <div class="subtitle">There are many variations of passages </div>
+            </div>
+            <!-- /Page Title -->
+
+            <!-- Breadcrumbs -->
+            <div class="col-md-4">
+                <ul class="breadcrumb">
+                    <li><i class="fa fa-fw fa-home"></i> <a href="#">Home</a></li>
+                    <li>Vincent Harper</li>
+                </ul>
+            </div>
+            <!-- /Breadcrumbs -->
+
+        </div>
+    </div>
+</section>
+<!-- /Section: Page Header -->
+
+<!-- Main -->
+<main class="main-container">
+
+    <!-- Section: User Information -->
+    <section class="section section-small">
+        <div class="container">
+            <div class="row">
+
+                <!-- Single User -->
+                <div class="single-user">
+
+                    <!-- Images -->
+                    <div class="col-md-4">
+                        <div class="image">
+
+                            <div class="img-carousel owl-carousel owl-theme">
+                                <div class="item">
+                                    <a href="<%= @team.avatar_url.to_s %>" class="image-popup">
+                                        <div class="gallery-image">
+                                          <%= image_tag (@team.avatar_url.to_s ) %>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- /Images -->
+
+                    <!-- Information -->
+                    <div class="col-md-8 information">
+
+                        <h2 class="name"><%= @team.name %></h2>
+                        <span class="post"><%= @team.position %></span>
+
+                        <p class="text-justify">
+                            <%= raw(@team.bio) %>
+                        </p>
+
+                        <ul class="list">
+                            <li>Skill: <%= @team.skill_1  %></li>
+                            <li><%= @team.skill_2  %></li>
+                            <li>Other Skills:<%= @team.skill_others  %></li>
+                            <li>Github: <%= @team.github %></li>
+                            <li>Twitter: <%= @team.twitter  %></li>
+                            <li>Medium: <%= @team.medium  %></li>
+
+                        </ul>
+
+                        <a href="<%= @team.cv %>" class="btn btn-theme"><i class="icon fa fa-fw fa-paper-plane-o"></i> <span class="text">Download CV/Portfolio</span></a>
+
+                    </div>
+                    <!-- /Information -->
+
+                </div>
+                <!-- /Single User -->
+
+            </div>
+        </div>
+    </section>
+    <section class="section section-small">
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="row">
+                <div class="col-md-12 ">
+                    <header>
+                        <h2 class="section-title"><%= @team.name %> Works</h2>
+                        <p class="section-subtitle">
+                          Here are some recent projects
+                        </p>
+                    </header>
+                </div>
+            </div>
+            <!-- /Section Header -->
+
+            <!-- Section Content -->
+            <div class="row section-content">
+                <div class="col-md-12">
+
+                    <!-- Projects Carousel -->
+                    <div id="carousel-projects" class="owl-carousel owl-theme">
+                        <% @projects.each do |project| %>
+                        <!-- Project Item -->
+                        <div class="item project">
+                            <a href="single-project.html">
+                                <div class="project-image-wrapper">
+                                    <div class="project-image">
+                                        <%= image_tag (project.projectimage_url.to_s) %>
+                                        <div class="information">
+                                            <h3 class="title"><%= project.title %></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- /Project Item -->
+                        <% end %>
+
+
+
+                    </div>
+                    <!-- /Projects Carousel -->
+
+                </div>
+            </div>
+            <!-- Section Content -->
+
+        </div>
+    </section>
+    <!-- /Section: User Information -->

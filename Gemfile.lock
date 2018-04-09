@@ -34,12 +34,6 @@ GIT
       responders
       warden (~> 1.2.3)
 
-GIT
-  remote: https://github.com/vigetlabs/active_material.git
-  revision: 853c60a22be2f6a57163a9d762da50c40e2061ec
-  specs:
-    active_material (1.4.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -311,7 +305,6 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  active_material!
   activeadmin!
   bcrypt-ruby (~> 3.0.0)
   bootstrap-sass (~> 3.3.7)

@@ -1,0 +1,29 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 card">
+        <div class="header">
+          <h4 class="title">All teams </h4>
+        </div>
+        <div class="content">
+          <div class="projects-list">
+            <% @teams.each do |t| %>
+              <div class="col-sm-4 col-xs-12 project">
+                  <%= link_to team do %>
+                      <div class="project-image-wrapper">
+                          <div class="project-image" style="height:200px;">
+                              <%= image_tag (t.avatar_url.to_s) %>
+
+                              <div class="information">
+                                  <h3 class="title"><%= t.title %></h3>
+                                  <h5 class="title"><%= link_to 'Edit', edit_managements_t_path(t) %></span>
+                                  <h5 class="title"><%= link_to 'Destroy', managements_t_path(t), method: :delete, data: { confirm: 'Are you sure?' } %></span>
+                              </div>
+                          </div>
+                      </div>
+                  <% end %>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>

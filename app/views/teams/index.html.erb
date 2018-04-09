@@ -1,0 +1,40 @@
+<section style="background-image: url(<%= asset_path 'Ban2.png' %>); " class="secbg">
+</section>
+
+
+<!-- Main -->
+<main class="main-container">
+    <div class="container">
+        <div class="row">
+
+            <div class="projects-list">
+              <% @teams.each do |t| %>
+                <div class="col-sm-6 col-xs-12 project">
+                    <%= link_to t do %>
+                        <div class="project-image-wrapper">
+                            <div class="project-image" >
+                                <%= image_tag (t.avatar_url.to_s) %>
+                                <div class="information">
+                                    <h3 class="title"><%= t.name %></h3>
+                                    <span class="category"><%= t.position %></span>
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
+                </div>
+                <% end %>
+              </div>
+
+
+
+        </div>
+    </div>
+</main>
+<!-- /Main -->
+
+
+<!-- Scroll To Top -->
+<div id="scroll-to-top" class="scroll-to-top">
+    <i class="icon fa fa-angle-up"></i>
+</div>
+<!-- /Scroll To Top -->

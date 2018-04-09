@@ -51,13 +51,29 @@
 		</li>
 			</ul>
 		</li>
-
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				<i class="pe-7s-users"></i>
+				<p class="">
+					Teams
+					<b class="caret"></b>
+				</p>
+			</a>
+			<ul class="dropdown-menu" >
 				<li>
-					<a href="notifications.html">
-						<i class="pe-7s-bell"></i>
-						<p>Tasks</p>
-					</a>
+					<%= link_to managements_teams_path do %>
+						<i class="pe-7s-users"></i>
+						<p>Team Memebers</p>
+					<% end %>
 				</li>
+				<li>
+					<%= link_to new_managements_team_path do %>
+						<i class="pe-7s-users"></i>
+						<p>Team Memebers</p>
+					<% end %>
+				</li>
+			</ul>
+		</li>
 				<li class="active-pro">
 					<%=link_to root_path do %>
 						<i class="pe-7s-rocket"></i>

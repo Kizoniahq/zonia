@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180330131442) do
+ActiveRecord::Schema.define(version: 20180406193108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -158,6 +158,25 @@ ActiveRecord::Schema.define(version: 20180330131442) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "teams", force: :cascade do |t|
+    t.string "name"
+    t.string "skill_1"
+    t.string "skill_2"
+    t.string "skill_others"
+    t.string "avatar"
+    t.string "github"
+    t.string "medium"
+    t.string "twitter"
+    t.string "cv"
+    t.bigint "managements_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "bio"
+    t.string "position"
+    t.string "steaamit"
+    t.index ["managements_id"], name: "index_teams_on_managements_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -177,4 +196,5 @@ ActiveRecord::Schema.define(version: 20180330131442) do
 
   add_foreign_key "contacts", "managements"
   add_foreign_key "products", "managements"
+  add_foreign_key "teams", "managements", column: "managements_id"
 end

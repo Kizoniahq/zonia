@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+
+  get 'teams/index'
+
+  get 'teams/show'
+
   mount Ckeditor::Engine => '/ckeditor'
   resources :managements, only: [:index]
   devise_for :managements
@@ -6,10 +12,11 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
 
    namespace :managements do
-      resources :projects do
+      resources :projects  do
         resources :tasks
       end
-      resources :tasks
+        resources :teams
+        resources :tasks
         resources :products
         resources :contacts do
           resources :comments
@@ -19,6 +26,7 @@ Rails.application.routes.draw do
       resources :projects, only: [:index, :show]
         resources :products, only: [:index, :show]
         resources :contacts, only:[:new, :create]
+        resources :teams , only: [:index, :show]
 
   ActiveAdmin.routes(self)
     root 'home#index'

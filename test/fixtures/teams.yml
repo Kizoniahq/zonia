@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  skill_1: MyString
+  skill_2: MyString
+  skill_others: MyString
+  avatar: MyString
+  github: MyString
+  medium: MyString
+  twitter: MyString
+  cv: MyString
+  managements: one
+
+two:
+  name: MyString
+  skill_1: MyString
+  skill_2: MyString
+  skill_others: MyString
+  avatar: MyString
+  github: MyString
+  medium: MyString
+  twitter: MyString
+  cv: MyString
+  managements: two
