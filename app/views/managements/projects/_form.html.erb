@@ -32,6 +32,12 @@
 </div>
 <div class="form-group">
   <div class="col-md-12">
+    <%= f.input :developer, :as => :select, :collection => Team.all.map{|c| ["#{c.github}, #{c.name}", c.id]} %>
+
+  </div>
+</div>
+<div class="form-group">
+  <div class="col-md-12">
     <%= f.submit :submit, class: "btn  btn-picasso" %>
   </div>
 </div>

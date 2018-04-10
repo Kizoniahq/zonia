@@ -1,20 +1,22 @@
 <!-- Section: Page Header -->
+<section style="background-image: url(<%= asset_path 'Ban2.png' %>); " class="secbg">
+</section>
 <section class="section-page-header">
     <div class="container">
         <div class="row">
 
             <!-- Page Title -->
             <div class="col-md-8">
-                <h1 class="title">Vincent Harper</h1>
-                <div class="subtitle">There are many variations of passages </div>
+                <h1 class="title"><%= @team.name %></h1>
+                <div class="subtitle"><%= @team.position %> </div>
             </div>
             <!-- /Page Title -->
 
             <!-- Breadcrumbs -->
             <div class="col-md-4">
                 <ul class="breadcrumb">
-                    <li><i class="fa fa-fw fa-home"></i> <a href="#">Home</a></li>
-                    <li>Vincent Harper</li>
+                    <li><i class="fa fa-fw fa-home"></i> <%= link_to "Home", root_path %></li>
+                    <li><%= @team.name %></li>
                 </ul>
             </div>
             <!-- /Breadcrumbs -->

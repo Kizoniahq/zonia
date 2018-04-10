@@ -7,7 +7,8 @@ class TeamsController < ApplicationController
     @teams = Team.all.order('created_at DESC')
   end
 def show
-  @teams = Team.all.order('created_at DESC')
+  @projects = Project.all.order('created_at DESC')
+
 end
 
 

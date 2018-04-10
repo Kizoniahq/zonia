@@ -1,3 +1,5 @@
 class Team < ApplicationRecord
-  belongs_to :managements
+  mount_uploader :avatar, AvatarUploader
+  belongs_to :management
+  has_many :projects
 end

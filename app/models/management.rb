@@ -8,5 +8,6 @@ class Management < ApplicationRecord
 
  has_many :projects
  has_many :contacts
+ has_many :teams
 
 end

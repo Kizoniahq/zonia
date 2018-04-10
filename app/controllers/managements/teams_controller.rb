@@ -1,7 +1,7 @@
 class Managements::TeamsController < ApplicationController
   layout 'management'
     before_action :authenticate_management!
-  before_action :set_team, only: [:show, :edit, :update, :destroy]
+  before_action :set_team, only: [:show, :edit, :update]
   # GET /teams/new
   def index
   @teams = Team.all.order('created_at DESC')
@@ -47,13 +47,7 @@ class Managements::TeamsController < ApplicationController
 
   # DELETE /teams/1
   # DELETE /teams/1.json
-  def destroy
-    @team.destroy
-    respond_to do |format|
-      format.html { redirect_to teams_url, notice: 'team was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -64,7 +58,7 @@ class Managements::TeamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_params
-      params.require(:team).permit(:name, :github, :medium, :skill_1, :skill_2, :skill_others, :avatar, :twitter, :cv, :management, :bio, :position, :steamit )
+      params.require(:team).permit(:name, :github, :medium, :skill_1, :skill_2, :skill_others, :avatar, :twitter, :cv, :management_id, :bio, :position, :steamit )
     end
 
 end
