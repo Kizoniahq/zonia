@@ -8,7 +8,7 @@ class ManagementsController < ApplicationController
   @managements = Management.where(management_id: current_management).order('created_at DESC')
   @projects = Project.where(management_id: current_management).order('created_at DESC')
   @contacts = Contact.all.order('created_at DESC')
-  @teams = Team.all.order
+  @teams = Team.all
 
   end
 
