@@ -13,7 +13,7 @@
                     <%= link_to project do %>
                         <div class="project-image-wrapper">
                             <div class="project-image" >
-                                <%= image_tag (project.projectimage_url.to_s) %>
+                                <%= image_tag (project.projectimage_url.to_s), class: "img-reponsive" %>
                                 <div class="information">
                                     <h3 class="title"><%= project.title %></h3>
                                     <span class="category"><%= project.client %></span>

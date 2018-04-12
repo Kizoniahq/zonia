@@ -43,9 +43,8 @@
 
                             <div class="img-carousel owl-carousel owl-theme">
                                 <div class="item">
-                                    <a href="<%= @team.avatar_url.to_s %>" class="image-popup">
                                         <div class="gallery-image">
-                                          <%= image_tag (@team.avatar_url.to_s ) %>
+                                          <%= image_tag (@team.avatar_url.to_s ), class: "img-reponsive" %>
                                         </div>
                                     </a>
                                 </div>

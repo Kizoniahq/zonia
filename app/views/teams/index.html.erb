@@ -9,11 +9,11 @@
 
             <div class="projects-list">
               <% @teams.each do |t| %>
-                <div class="col-sm-6 col-xs-12 project">
+                <div class="col-sm-6 col-xs-12 project" style="height:300px; width:300px;">
                     <%= link_to t do %>
                         <div class="project-image-wrapper">
-                            <div class="project-image" >
-                                <%= image_tag (t.avatar_url.to_s) %>
+                            <div class="project-image"  >
+                                <%= image_tag (t.avatar_url.to_s), class: "img-reponsive" %>
                                 <div class="information">
                                     <h3 class="title"><%= t.name %></h3>
                                     <span class="category"><%= t.position %></span>
