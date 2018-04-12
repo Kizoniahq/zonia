@@ -9,7 +9,10 @@
 <%= f.input :skill_others, class: "form-control", placeholder: "Other skill" %>
 <%= f.input :position, class: "form-control", placeholder: "Organization Positions" %>
 <%= f.input :bio, class: "form-control", placeholder: "About You",  as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } }  %>
-<%= f.input :cv, class: "form-control", placeholder: "http:// Your CV link" %>
+<%= f.input :github, class: "form-control", placeholder: "http:// Your link" %>
+<%= f.input :medium, class: "form-control", placeholder: "http:// Your  link" %>
+<%= f.input :twitter, class: "form-control", placeholder: "http:// Your  link" %>
+
 <%= f.submit :submit, class: "btn btn-purple" %>
 
 
