@@ -15,7 +15,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'carrierwave'
 gem "mini_magick"
 gem "fog-aws"
-gem "simple_form"
 gem 'devise', github: 'plataformatec/devise'
 gem 'friendly_id'
 gem "simple_form"
